@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #98a3a8, #373d3f);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.glow-bar {
+  /*Change this value to resize 
+  the bars to whatever you may need*/
+  font-size: 23px;
+  background: #2c3237;
+  border-radius: 0.4em;
+  box-shadow: 
+    inset -2px -2px 0 #7b8287,
+    inset 0.2em 0.2em 0.5em #15181b;
+  padding: 1em;
+  margin: 1em;
+}
+
+.buttons {
+  border-radius: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 
+    0 0.2em 0.2em #202224,
+    0 -0.2em 0.2em #202224;
+}
+
+.bar-vertical .buttons {
+  flex-direction: column;
+  box-shadow: 
+    0.2em 0 0.2em #202224,
+    -0.2em 0 0.2em #202224;
+}
+
+.glow-bar button {
+  border: none;
+  font-size: 1.3em;
+  width: 2em;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  color: #2c3237;
+  text-shadow: 0 1px 1px #788085;
+  transition: 0.3s;
+}
+
+.bar-horizontal button {
+  background: linear-gradient(180deg, #666d72, #545a5e);
+  box-shadow: 
+    inset 0.1em 0 0.1em #6b7277,
+    inset -0.1em 0 0.1em #3b3f42;
+}
+
+.bar-vertical button {
+  background: linear-gradient(90deg, #666d72, #545a5e);
+  box-shadow: 
+    inset 0 0.1em 0.1em #6b7277,
+    inset 0 -0.1em 0.1em #3b3f42;
+}
+
+/*Dynamic classes for Javascript*/
+.glow-bar .button-pressed {
+  color: #fff;
+  text-shadow: 0 0 0.5em #3265ff;
+  background: #545a5e;
+  border: #191b1d 1px solid;
+}
+
+.bar-horizontal .button-pressed {
+  box-shadow: 
+    inset 0.1em 0 0.1em #222428,
+    inset -0.1em 0 0.1em #222428;
+}
+
+.bar-vertical .button-pressed {
+  box-shadow: 
+    inset 0 0.1em 0.1em #222428,
+    inset 0 -0.1em 0.1em #222428;
+}
+
+.bar-horizontal button:first-child {
+  border-top-left-radius: 0.2em;
+  border-bottom-left-radius: 0.2em;
+}
+
+.bar-horizontal button:last-child {
+  border-top-right-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+}
+
+.bar-vertical button:first-child {
+  border-top-left-radius: 0.2em;
+  border-top-right-radius: 0.2em;
+}
+
+.bar-vertical button:last-child {
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+}
